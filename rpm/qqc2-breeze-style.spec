@@ -38,6 +38,7 @@ Requires: opt-kf5-kguiaddons >= %{kf5_version_min}
 Requires: opt-kf5-kiconthemes >= %{kf5_version_min}
 Requires: opt-kf5-kirigami2 >= %{kf5_version_min}
 Requires: opt-kf5-kconfig >= %{kf5_version_min}
+Requires: opt-kf5-kquickcharts >= %{kf5_version_min}
 
 %description
 This is a pure Qt Quick/Kirigami Qt Quick Controls style.
