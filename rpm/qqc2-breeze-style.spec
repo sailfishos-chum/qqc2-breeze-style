@@ -1,7 +1,7 @@
 %global kf5_version_min 5.98
 
 Name:    qqc2-breeze-style
-Version: 5.27.4
+Version: 5.27.11
 Release: 1%{?dist}
 Summary: QtQuickControls2 breeze style
 
@@ -52,22 +52,13 @@ This is a pure Qt Quick/Kirigami Qt Quick Controls style.
 export QTDIR=%{_opt_qt5_prefix}
 touch .git
 
-mkdir -p build
-pushd build
-
-%_opt_cmake_kf5 ../ \
-
-%make_build
-
-popd
+%_opt_cmake_kf5
+%cmake_build
 
 %install
-pushd build
-make DESTDIR=%{buildroot} install
-popd
+%cmake_install
 
-
-%files 
+%files
 %doc README.md
 %license LICENSES/*.txt
 #{_opt_kf5_plugindir}/kirigami/org.kde.breeze.so
